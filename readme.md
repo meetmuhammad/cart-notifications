@@ -66,6 +66,3 @@ For support, please visit [WordPress Plugin Support Page](#).
 
 Contributions to the Cart Notifications plugin are welcome. 
 
----
-
-This updated README includes the information about accessing the Cart Notifications settings in the WordPress admin area. Remember to replace the placeholders for support and contributing guidelines with actual links when they are available.
