@@ -1,0 +1,202 @@
+.cart-notifications-pops {
+    max-width: 350px;
+    width: 90%;
+    position: fixed;
+    right: 20px;
+    top: 80px;
+    border: 1px solid #dddddd;
+    padding: 20px;
+    background: #fff;
+    z-index: 999;
+    animation: slideInFromRight 0.5s forwards;
+
+    &.bottom {
+      top: auto;
+      bottom: 20px;
+    }
+  
+    &.pops-layout-2 {
+
+      .cart-notifications-item-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-width: inherit !important;
+        height: auto !important;
+        background: #000;
+
+        img {
+          opacity: 0.4;
+        }
+      }
+
+      .cart-notifications-item-caption {
+        position: relative;
+        z-index: 2;
+
+        p {
+          color: #fff !important;
+        }
+      }
+  
+      .cart-notifications-pops-iner,
+      h3 {
+        color: #fff;
+      }
+  
+      h3 {
+        border-bottom: 1px solid #737373;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .close-pops {
+        z-index: 2;
+      }
+  
+      .pop-btn {
+        background-color: #fff;
+        color: #000;
+        z-index: 2;
+        position: relative;
+        width: 320px;
+      }
+  
+      .close-pops::before,
+      .close-pops::after {
+        background: #fff;
+      }
+    }
+  
+    h3 {
+      margin: 0 0 10px 0;
+      font-family: arial;
+      font-size: 16px;
+    }
+  
+    .cart-notifications-pops-iner {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+  
+      .cart-notifications-item-img {
+        max-width: 100px;
+        width: 100%;
+        overflow: hidden;
+        height: 120px;
+  
+        img {
+          width: 100%;
+          display: block;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+  
+      .cart-notifications-item-caption {
+        display: flex;
+        flex-flow: column;
+        gap: 10px;
+        font-family: arial;
+        width: inherit;
+  
+        h4 {
+          margin: 0;
+          font-size: 18px;
+          max-width: 80%;
+  
+          a {
+            color: inherit;
+            text-decoration: none;
+  
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+  
+        p {
+          margin: 0;
+          font-size: 14px;
+          color: #5a5a5a;
+          line-height: 1.5;
+        }
+      }
+    }
+  
+    .pop-btn {
+      width: 100%;
+      margin: 15px 0 0 0;
+      border: none;
+      background-color: #212021;
+      border-color: #212021;
+      color: #fff;
+      padding: 15px;
+      cursor: pointer;
+      font-weight: bold;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      text-decoration: none;
+      line-height: normal;
+    }
+  
+    .close-pops {
+      font-size: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 100%;
+      border: none;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+      background: transparent !important;
+      padding: 0;
+  
+      &::before,
+      &::after {
+        content: "";
+        width: 1px;
+        height: 16px;
+        position: absolute;
+        left: 10px;
+        background: gray;
+        top: 4px;
+        transform: rotate(45deg);
+      }
+  
+      &::before {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  
+  // Slide in from the right
+  @keyframes slideInFromRight {
+    from {
+      right: -100%;
+    }
+    to {
+      right: 20px;
+    }
+  }
+  
+  // Slide out to the left
+  @keyframes slideOutToLeft {
+    from {
+      right: 20px;
+    }
+    to {
+      right: -100%;
+    }
+  }
+  
+  .cart-notifications-pops.slide-out {
+    animation: slideOutToLeft 0.5s forwards;
+  }
+  
